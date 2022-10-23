@@ -11,8 +11,8 @@ https: function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      city.innerText = `City : ${data.name}`;
+      weather.innerText = `Weather : ${data.weather[0].main} / Temp. : ${data.main.temp}`;
     });
 }
 function onGeoError() {
